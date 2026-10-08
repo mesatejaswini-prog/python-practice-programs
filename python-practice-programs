@@ -1,0 +1,216 @@
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+OUTPUT:
+Enter a number: 10
+Even number
+
+
+num = int(input("Enter a number: "))
+
+if num > 0:
+    print("Positive number")
+elif num < 0:
+    print("Negative number")
+else:
+    print("Zero")
+OUTPUT:
+Enter a number: -5
+Negative number
+
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a > b:
+    print("Largest =", a)
+else:
+    print("Largest =", b)
+OUTPUT:
+Enter first number: 25
+Enter second number: 40
+Largest = 40
+
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if a >= b and a >= c:
+    print("Largest =", a)
+elif b >= a and b >= c:
+    print("Largest =", b)
+else:
+    print("Largest =", c)
+OUTPUT:
+Enter first number: 25
+Enter second number: 40
+Enter third number: 30
+Largest = 40
+
+
+year = int(input("Enter year: "))
+
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    print("Leap year")
+else:
+    print("Not a leap year")
+OUTPUT:
+Enter year: 2024
+Leap year
+
+
+for i in range(1, 101):
+    print(i, end=" ")
+OUTPUT:
+1 2 3 4 5 6 7 8 9 10 ... 98 99 100
+
+
+num = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+OUTPUT:
+Enter a number: 5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+
+
+n = int(input("Enter a number: "))
+total = 0
+
+for i in range(1, n + 1):
+    total = total + i
+
+print("Sum =", total)
+OUTPUT:
+Enter a number: 10
+Sum = 55
+
+
+n = int(input("Enter a number: "))
+fact = 1
+
+for i in range(1, n + 1):
+    fact = fact * i
+
+print("Factorial =", fact)
+OUTPUT:
+Enter a number: 5
+Factorial = 120
+
+
+n = int(input("Enter number of terms: "))
+
+a = 0
+b = 1
+
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+OUTPUT:
+Enter number of terms: 8
+0 1 1 2 3 5 8 13
+
+
+num = int(input("Enter a number: "))
+
+if num <= 1:
+    print("Not a prime number")
+else:
+    for i in range(2, num):
+        if num % i == 0:
+            print("Not a prime number")
+            break
+    else:
+        print("Prime number")
+OUTPUT:
+Enter a number: 17
+Prime number
+
+
+num = int(input("Enter a number: "))
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+print("Reverse =", reverse)
+OUTPUT:
+Enter a number: 12345
+Reverse = 54321
+
+
+num = int(input("Enter a number: "))
+
+original = num
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+if original == reverse:
+    print("Palindrome number")
+else:
+    print("Not a palindrome number")
+OUTPUT:
+Enter a number: 121
+Palindrome number
+
+
+Pattern 1
+for i in range(1, 6):
+    print("*" * i)
+OUTPUT:
+*
+**
+***
+****
+*****
+Pattern 2
+for i in range(5, 0, -1):
+    print("*" * i)
+Output:
+
+*****
+****
+***
+**
+*
+Pattern 3 – Pyramid
+for i in range(1, 6):
+    print(" " * (5 - i) + "* " * i)
+Output:
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+Pattern 4 – Number Pattern
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()
+Output:
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
